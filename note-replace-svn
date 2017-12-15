@@ -1,5 +1,5 @@
-mkdir myrepos
-cd myrepos
+mkdir jibiki; 
+cd jibiki
 git init; git config core.sparseCheckout true
 git remote add -f origin https://github.com/mangeot/jibiki.git
 echo "src/sql/*" >  .git/info/sparse-checkout
