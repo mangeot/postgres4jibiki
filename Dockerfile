@@ -17,8 +17,8 @@ ENV DATABASE_PASSWORD=$DATABASE_PASSWORD
 
 RUN apt-get update
 
-RUN apt-get install -y subversion
-
+#RUN apt-get install -y subversion
+RUN apt-get install -y git-core
 RUN mkdir jibiki
 
 WORKDIR jibiki
