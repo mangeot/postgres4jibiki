@@ -23,11 +23,11 @@ RUN mkdir jibiki
 
 WORKDIR jibiki
 
-RUN git init; git config core.sparseCheckout true
-RUN git remote add -f origin https://github.com/mangeot/jibiki.git
-RUN echo "src/sql/*" >  .git/info/sparse-checkout
-RUN git checkout master
-RUN cp -R src/sql ../docker-entrypoint-initdb.d/.
+RUN git init && git config core.sparseCheckout true \
+  && git remote add -f origin https://github.com/mangeot/jibiki.git \
+  && echo "src/sql/*" >  .git/info/sparse-checkout \
+  && git checkout master \
+  && cp -R src/sql ../docker-entrypoint-initdb.d/.
 
 WORKDIR /
 
