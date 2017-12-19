@@ -5,7 +5,7 @@
 
 FROM postgres
 
-MAINTAINER Mathieu Mangeot
+LABEL maintainer="Mathieu.Mangeot@imag.fr"
 
 ARG DATABASE_NAME="jibiki"
 ARG DATABASE_USER="jibiki"
