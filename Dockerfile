@@ -3,7 +3,6 @@
 # Based on postgres
 ############################################################
 
-#FROM postgres
 FROM postgres:alpine
 
 LABEL maintainer="Mathieu.Mangeot@imag.fr"
@@ -16,7 +15,6 @@ ENV DATABASE_NAME=$DATABASE_NAME
 ENV DATABASE_USER=$DATABASE_USER
 ENV DATABASE_PASSWORD=$DATABASE_PASSWORD
 
-#RUN apt-get update && apt-get install -y git-core
 RUN apk add --no-cache git
 
 WORKDIR /jibiki
